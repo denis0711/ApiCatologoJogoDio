@@ -14,14 +14,15 @@ Segue imagens e Gifs da API ...
 
 [![Swagger-Portifolio.png](https://i.postimg.cc/k5Pc8mfC/Swagger-Portifolio.png)](https://postimg.cc/jDvP0Bp3)
 
-Requisição Get - Só registrei 2 no BD para ilustração
+
+
+<h2>Requisição Get - Só registrei 2 no BD para ilustração</h2>
 
 <p align="center">
 	<img width="1280" height="720" src="wwwroot/gif/getAPI.gif"
 </p>
 
-
-Requisição Post 
+<h2>Requisição Post</h2>
 
 <p align="center">
 	<img width="1280" height="720" src="wwwroot/gif/postAPI.gif"
@@ -29,4 +30,15 @@ Requisição Post
 
 
 
-Amanhã colocando as demais gifs do Put e do Delete !!
+<h2>Requisição Put</h2>
+	
+<p align="center">
+	<img width="1280" height="720" src="wwwroot/gif/putAPI.gif"
+</p>
+
+<h2>Requisição Delete</h2>
+	
+<p align="center">
+	<img width="1280" height="720" src="wwwroot/gif/DeleteAPI.gif"
+</p>
+
