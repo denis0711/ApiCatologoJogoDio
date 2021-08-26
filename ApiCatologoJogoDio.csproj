@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Validations\" />
-    <Folder Include="wwwroot\gif\" />
   </ItemGroup>
 
 </Project>
