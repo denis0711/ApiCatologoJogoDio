@@ -17,14 +17,14 @@ Segue imagens e Gifs da API ...
 Requisição Get - Só registrei 2 no BD para ilustração
 
 <p align="center">
-	<img width="1400" height="800" src="wwwroot/gif/getAPI.gif"
+	<img width="1280" height="720" src="wwwroot/gif/getAPI.gif"
 </p>
 
 
 Requisição Post 
 
 <p align="center">
-	<img width="1400" height="800" src="wwwroot/gif/postAPI.gif"
+	<img width="1280" height="720" src="wwwroot/gif/postAPI.gif"
 </p>
 
 
