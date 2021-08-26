@@ -9,10 +9,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiCatologoJogoDio.Repositoy;
 
 namespace ApiCatologoJogoDio
 {
@@ -29,6 +31,9 @@ namespace ApiCatologoJogoDio
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddScoped<IJogoRepository, JogoRepository>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddDbContext<MeuDbContext>(options =>
             {

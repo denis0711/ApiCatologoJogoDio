@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ApiCatologoJogoDio.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace ApiCatologoJogoDio.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
                     Produtora = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
-                    Preco = table.Column<double>(type: "decimal(8,2", nullable: false)
+                    Preco = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

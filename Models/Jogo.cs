@@ -18,8 +18,7 @@ namespace ApiCatologoJogoDio.Models
         [StringLength(80, ErrorMessage = "O Campo deve ter no maximo 80 caracteres")]
         public string Produtora { get; set; }
         [Required]
-        [DataType(DataType.Currency)]
-        [Column(TypeName = "decimal(8,2")]
+       
         public double Preco { get; set; }
     }
 }

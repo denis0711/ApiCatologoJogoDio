@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiCatologoJogoDio.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20210825220040_Initial")]
-    partial class Initial
+    [Migration("20210826001137_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace ApiCatologoJogoDio.Migrations
                         .HasColumnType("nvarchar(80)");
 
                     b.Property<double>("Preco")
-                        .HasColumnType("decimal(8,2");
+                        .HasColumnType("float");
 
                     b.Property<string>("Produtora")
                         .IsRequired()

@@ -31,7 +31,7 @@ namespace ApiCatologoJogoDio.Migrations
                         .HasColumnType("nvarchar(80)");
 
                     b.Property<double>("Preco")
-                        .HasColumnType("decimal(8,2");
+                        .HasColumnType("float");
 
                     b.Property<string>("Produtora")
                         .IsRequired()
