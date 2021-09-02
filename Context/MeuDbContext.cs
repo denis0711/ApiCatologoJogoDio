@@ -15,5 +15,6 @@ namespace ApiCatologoJogoDio.Context
         }
 
         public DbSet<Jogo> Jogos { get; set; }
+        public DbSet<Produtora> Produtoras { get; set; }
     }
 }

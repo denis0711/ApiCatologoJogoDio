@@ -32,6 +32,7 @@ namespace ApiCatologoJogoDio
         {
 
             services.AddScoped<IJogoRepository, JogoRepository>();
+            services.AddScoped<IProdutoraRepository, ProdutraRepository>();
 
             services.AddAutoMapper(typeof(Startup));
 

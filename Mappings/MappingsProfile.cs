@@ -13,6 +13,8 @@ namespace ApiCatologoJogoDio.Mappings
         public MappingsProfile()
         {
             CreateMap<Jogo, JogoDto>().ReverseMap();
+            CreateMap<Produtora, ProdutoraDTO>().ReverseMap();
         }
+        
     }
 }

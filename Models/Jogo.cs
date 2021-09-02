@@ -14,11 +14,15 @@ namespace ApiCatologoJogoDio.Models
         [StringLength(80, ErrorMessage = "O Campo deve ter no maximo 80 caracteres")]
         public string Nome { get; set; }
 
-        [Required]
-        [StringLength(80, ErrorMessage = "O Campo deve ter no maximo 80 caracteres")]
-        public string Produtora { get; set; }
+   
         [Required]
        
         public double Preco { get; set; }
+
+        public Produtora Produtora { get; set; }
+
+        public int ProdutoraId { get; set; }
+
+
     }
 }
