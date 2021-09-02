@@ -8,11 +8,7 @@ namespace ApiCatologoJogoDio.DTOs
     public class ProdutoraDTO
     {
         public int ProdutoraId { get; set; }
-
         public string Nome { get; set; }
-
-
-
         public ICollection<JogoDto> Jogos { get; set; }
     }
 }

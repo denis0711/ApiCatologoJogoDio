@@ -15,6 +15,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiCatologoJogoDio.Repositoy;
+using Microsoft.AspNetCore.Identity;
+using ApiCatologoJogoDio.Models;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ApiCatologoJogoDio
 {
@@ -41,6 +46,37 @@ namespace ApiCatologoJogoDio
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddDefaultIdentity<IdentityUser>()
+                 .AddRoles<IdentityRole>()
+                 .AddEntityFrameworkStores<MeuDbContext>()
+                 .AddDefaultTokenProviders();
+
+            var appSettignsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettignsSection);
+
+            var appSettings = appSettignsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = true;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = appSettings.ValidoEm,
+                    ValidIssuer = appSettings.Emissor
+
+                };
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -61,6 +97,8 @@ namespace ApiCatologoJogoDio
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
