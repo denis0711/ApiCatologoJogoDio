@@ -80,7 +80,8 @@ namespace ApiCatologoJogoDio
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatologoJogoDio", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatologoJogoDio", Version = "v1" ,
+                    Description = "É uma Api para cadastro de jogos e de suas Produtoras"});
             });
         }
 
